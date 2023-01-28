@@ -16,7 +16,7 @@
     {
       "name": "MainPackage.swift.j2",
       "description": "MainPackage.swift template",
-      "outputFilePath": "Sources/{{projectName}}/MainPackage.swift"
+      "outputFilePath": "Sources/{{projectName}}/{{projectName}}.swift"
     },
     {
       "name": "README.md.j2",
