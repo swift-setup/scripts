@@ -5,12 +5,14 @@
     {
       "name": "sample.yaml",
       "description": "Sample GitHub Actions for Swift-setup plugin workflow",
-      "outputFilePath": ".github/workflows/test.yaml"
+      "outputFilePath": ".github/workflows/test.yaml",
+      "shouldRender": false
     },
     {
       "name": "package.py",
       "description": "Helper script to package the plugin",
-      "outputFilePath": "package.py"
+      "outputFilePath": "package.py",
+      "shouldRender": false
     }
   ]
 }
