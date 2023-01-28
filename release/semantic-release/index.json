@@ -1,0 +1,11 @@
+{
+  "title": "Semantic Release",
+  "description": "Semantic-release automates the whole package release workflow including: determining the next version number, generating the release notes, and publishing the package. This template will create a release configuration file for semantic-release.",
+  "templates": [
+    {
+      "name": "releaserc",
+      "description": "This file configures semantic-release.",
+      "outputFilePath": ".releaserc"
+    }
+  ]
+}

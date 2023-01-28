@@ -6,5 +6,9 @@
   {
     "title": "Swift Setup plugin template",
     "path": "/swift/plugin"
+  },
+  {
+    "title": "Semantic release configuration",
+    "path": "/release/sematic-release"
   }
 ]
