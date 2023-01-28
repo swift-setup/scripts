@@ -1,0 +1,28 @@
+{
+  "type": "object",
+  "properties": {
+    "displayName": { "type": "string", "title": "Display Name" },
+    "bundleIdentifier": { "type": "string", "title": "Bundle Identifier" },
+    "author": { "type": "string", "title": "Author" },
+    "shortDescription": { "type": "string", "title": "Short Description" },
+    "repository": { "type": "string", "title": "Repository" },
+    "keywords": {
+      "title": "Keywords",
+      "type": "array",
+      "items": { "type": "string", "title": "Keyword" }
+    },
+    "systemImageName": {
+      "type": "string",
+      "title": "System Image Name",
+      "nullable": true
+    }
+  },
+  "required": [
+    "displayName",
+    "bundleIdentifier",
+    "author",
+    "shortDescription",
+    "repository",
+    "keywords"
+  ]
+}

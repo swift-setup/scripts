@@ -1,0 +1,27 @@
+{
+  "title": "Swift Setup Plugin templates",
+  "description": "Plugin templates for swift setup contains a Package.swift, basic setup",
+  "schema": "schema.json",
+  "templates": [
+    {
+      "name": "GitIgnore.j2",
+      "description": "GitIgnore template",
+      "outputFilePath": ".gitignore"
+    },
+    {
+      "name": "Package.swift.j2",
+      "description": "Package.swift template",
+      "outputFilePath": "Package.swift"
+    },
+    {
+      "name": "MainPackage.swift.j2",
+      "description": "MainPackage.swift template",
+      "outputFilePath": "Sources/{{projectName}}/MainPackage.swift"
+    },
+    {
+      "name": "README.md.j2",
+      "description": "README.md template",
+      "outputFilePath": "README.md"
+    }
+  ]
+}
