@@ -19,7 +19,7 @@ jobs:
       - name: Build Swift Package
         run: swift build -c release
       - name: Archive Swift Package
-        run: python3 package.py --pattern="*.dylib" --folder=.build/release
+        run: python3 package.py --folder=.build/release
       - name: Upload Swift Package
         uses: softprops/action-gh-release@v1
         if: ${{ github.event_name == 'release' }}
