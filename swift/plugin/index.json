@@ -22,6 +22,11 @@
       "name": "README.md.j2",
       "description": "README.md template",
       "outputFilePath": "README.md"
+    },
+    {
+      "name": "Test.swift.j2",
+      "description": "Test.swift template",
+      "outputFilePath": "Sources/{{projectName}}Tests/{{projectName}}Tests.swift"
     }
   ]
 }
