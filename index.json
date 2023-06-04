@@ -1,14 +1,24 @@
 [
   {
-    "title": "GitHub Actions for plugin",
-    "path": "/workflows/plugin"
-  },
-  {
-    "title": "Swift Setup plugin template",
-    "path": "/swift/plugin"
-  },
-  {
-    "title": "Semantic release configuration",
-    "path": "/release/semantic-release"
+    "name": "Swift",
+    "children": [
+      {
+        "name": "Swift Setup Plugin",
+        "menus": [
+          {
+            "title": "GitHub Actions for plugin",
+            "path": "/workflows/plugin"
+          },
+          {
+            "title": "Swift Setup plugin template",
+            "path": "/swift/plugin"
+          },
+          {
+            "title": "Semantic release configuration",
+            "path": "/release/semantic-release"
+          }
+        ]
+      }
+    ]
   }
 ]
