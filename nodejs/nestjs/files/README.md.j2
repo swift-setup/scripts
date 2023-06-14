@@ -1,0 +1,29 @@
+![](https://github.com/meta-metopia/CMHK-Service/raw/main/images/logo.png)
+
+# KongShum Backend
+
+This is the backend for the KongShum app.
+
+# Local Development
+
+## Prerequisites
+
+- [Node.js](https://nodejs.org/en/)
+- [MongoDB](https://www.mongodb.com/)
+- [Pnpm](https://pnpm.js.org/)
+
+## Setup
+
+1. Clone the repository
+2. Install dependencies with `pnpm install`
+3. Create a `.env` file in the root directory and add the following environment variables:
+
+```
+DATABASE_URL=
+REDIS_URL=
+RABBITMQ_URL=
+JWT_SECRET=
+```
+
+4. Run `pnpm prisma generate` and  `pnpm prisma db push` to initialize your database
+5. Run `pnpm start:dev` to start the server

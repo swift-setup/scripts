@@ -1,0 +1,11 @@
+{
+  "type": "object",
+  "properties": {
+    "want_to_use_prisma": {
+      "type": "boolean",
+      "title": "Do you want use prisma for your project",
+      "default": false
+    }
+  },
+  "required": []
+}

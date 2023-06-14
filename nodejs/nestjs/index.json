@@ -1,0 +1,32 @@
+{
+  "title": "Kongshum Project setup",
+  "description": "Template for Kongshum project",
+  "schema": "schema.json",
+  "templates": [
+    {
+      "shouldInclude": {
+        "anyOf": {
+          "want_to_use_prisma": true
+        }
+      },
+      "name": "Prisma.service.ts.j2",
+      "description": "prisma service",
+      "outputFilePath": "src/prisma.service.ts"
+    },
+    {
+      "name": "Schema.prisma.j2",
+      "description": "schema prisma",
+      "outputFilePath": "schema.prisma"
+    },
+    {
+      "name": "Package.json.j2",
+      "description": "dependency",
+      "outputFilePath": "package.json"
+    },
+    {
+      "name": "Env.j2",
+      "description": "env file",
+      "outputFilePath": ".env"
+    }
+  ]
+}

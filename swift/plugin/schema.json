@@ -2,6 +2,7 @@
   "type": "object",
   "properties": {
     "projectName": { "type": "string", "title": "Project Name" },
+    "projectName2": { "type": "string", "title": "Project Name" },
     "displayName": { "type": "string", "title": "Display Name" },
     "bundleIdentifier": { "type": "string", "title": "Bundle Identifier" },
     "author": { "type": "string", "title": "Author" },
