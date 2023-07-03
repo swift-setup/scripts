@@ -5,7 +5,17 @@
       "type": "boolean",
       "title": "Do you want use prisma for your project",
       "default": false
-    }
+    },
+    "displayName": { "type": "string", "title": "Display Name" },
+    "author": { "type": "string", "title": "Author" },
+    "repository": { "type": "string", "title": "Repository" },
+    "shortDescription": { "type": "string", "title": "Short Description" }
   },
-  "required": []
+  "required": [
+    "want_to_use_prisma",
+    "displayName",
+    "author",
+    "repository",
+    "shortDescription"
+  ]
 }
