@@ -1,0 +1,60 @@
+import { CACHE_MANAGER, CacheInterceptor } from '@nestjs/common';
+import { APP_INTERCEPTOR } from '@nestjs/core';
+import { Test, TestingModule } from '@nestjs/testing';
+import { MongoMemoryReplSet } from 'mongodb-memory-server';
+import { AppController } from './app.controller';
+import { PrismaService } from './prisma.service';
+import * as process from 'process';
+
+describe('AppController', () => {
+  let appController: AppController;
+  let prisma: PrismaService;
+  let mongodb: MongoMemoryReplSet;
+
+  beforeAll(async () => {
+    mongodb = await MongoMemoryReplSet.create({
+      replSet: { count: 1, storageEngine: 'wiredTiger' },
+    });
+  });
+
+  beforeEach(async () => {
+    process.env.DATABASE_URL = mongodb.getUri('test');
+
+    const app: TestingModule = await Test.createTestingModule({
+      imports: [
+      ],
+      controllers: [AppController],
+      providers: [
+        PrismaService,
+        {
+          provide: APP_INTERCEPTOR,
+          useClass: CacheInterceptor,
+        },
+      ],
+    })
+      .useMocker((key) => {
+        if (key === CACHE_MANAGER) {
+          return {
+            get: jest.fn(),
+            set: jest.fn(),
+            del: jest.fn(),
+            reset: jest.fn(),
+          };
+        }
+      })
+      .compile();
+
+    prisma = app.get(PrismaService);
+    appController = app.get(AppController);
+  });
+
+  afterAll(async () => {
+    await prisma.$disconnect();
+    await mongodb.stop();
+  });
+
+  afterEach(async () => {
+    await prisma.user.deleteMany();
+  });
+
+});

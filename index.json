@@ -20,5 +20,19 @@
         ]
       }
     ]
+  },
+  {
+    "name": "Nestjs",
+    "children": [
+      {
+        "name": "Nestjs Setup Plugin",
+        "menus": [
+          {
+            "title": "Nestjs Project setup",
+            "path": "/nodejs/nestjs"
+          }
+        ]
+      }
+    ]
   }
 ]
