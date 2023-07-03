@@ -21,7 +21,7 @@
       },
       "name": "Schema.prisma.j2",
       "description": "schema prisma",
-      "outputFilePath": "schema.prisma"
+      "outputFilePath": "prisma/schema.prisma"
     },
     {
       "name": "App.controller.spec.ts.j2",

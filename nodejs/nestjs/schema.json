@@ -6,16 +6,19 @@
       "title": "Do you want use prisma for your project",
       "default": false
     },
+    "projectName": { "type": "string", "title": "Project Name" },
     "displayName": { "type": "string", "title": "Display Name" },
     "author": { "type": "string", "title": "Author" },
     "repository": { "type": "string", "title": "Repository" },
-    "shortDescription": { "type": "string", "title": "Short Description" }
+    "shortDescription": { "type": "string", "title": "Short Description" },
+    "bundleIdentifier": { "type": "string", "title": "Bundle Identifier" }
   },
   "required": [
-    "want_to_use_prisma",
+    "projectName",
     "displayName",
     "author",
     "repository",
-    "shortDescription"
+    "shortDescription",
+    "bundleIdentifier"
   ]
 }
