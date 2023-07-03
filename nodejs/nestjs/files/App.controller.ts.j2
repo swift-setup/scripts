@@ -1,0 +1,19 @@
+import {
+  Body,
+  CacheInterceptor,
+  Controller,
+  Get,
+  Post,
+  Request
+} from '@nestjs/common';
+
+@Controller()
+export class AppController {
+  constructor(private authService: AuthService) {}
+
+    @Get()
+    sayHello(): string {
+        return 'Hello World!';
+    }
+
+}

@@ -1,0 +1,35 @@
+import { CacheInterceptor, CacheModule, Module } from '@nestjs/common';
+import { ConfigModule } from '@nestjs/config';
+import { APP_INTERCEPTOR } from '@nestjs/core';
+import { JwtModule } from '@nestjs/jwt';
+import type { RedisClientOptions } from 'redis';
+import { AppController } from './app.controller';
+import { PrismaService } from './prisma.service';
+
+
+ConfigModule.forRoot();
+
+@Module({
+  imports: [
+    JwtModule.register({
+      secretOrPrivateKey: process.env.JWT_SECRET ?? 'secret',
+    }),
+    BlockchainModule,
+    CacheModule.register<RedisClientOptions>({
+      // Store-specific configuration:
+      url: process.env.REDIS_URL,
+      ttl: 60,
+      isGlobal: true,
+    }),
+    OrderStatusModule,
+  ],
+  controllers: [AppController],
+  providers: [
+    PrismaService,
+    {
+      provide: APP_INTERCEPTOR,
+      useClass: CacheInterceptor,
+    },
+  ],
+})
+export class AppModule {}

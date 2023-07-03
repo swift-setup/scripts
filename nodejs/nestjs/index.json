@@ -1,0 +1,102 @@
+{
+  "title": "Nestjs Project setup",
+  "description": "Template for nestjs project",
+  "schema": "schema.json",
+  "templates": [
+    {
+      "shouldInclude": {
+        "anyOf": {
+          "want_to_use_prisma": true
+        }
+      },
+      "name": "Prisma.service.ts.j2",
+      "description": "prisma service",
+      "outputFilePath": "src/prisma.service.ts"
+    },
+    {
+      "shouldInclude": {
+        "anyOf": {
+          "want_to_use_prisma": true
+        }
+      },
+      "name": "Schema.prisma.j2",
+      "description": "schema prisma",
+      "outputFilePath": "prisma/schema.prisma"
+    },
+    {
+      "name": "App.controller.spec.ts.j2",
+      "description": "test of app controller",
+      "outputFilePath": "src/app.controller.spec.ts"
+    },
+    {
+      "name": "App.controller.ts.j2",
+      "description": "app controller",
+      "outputFilePath": "src/app.controller.ts"
+    },
+    {
+      "name": "App.module.ts.j2",
+      "description": "app module",
+      "outputFilePath": "src/app.module.ts"
+    },
+    {
+      "name": "Main.ts.j2",
+      "description": "main file",
+      "outputFilePath": "src/main.ts"
+    },
+    {
+      "name": "Package.json.j2",
+      "description": "dependency",
+      "outputFilePath": "package.json"
+    },
+    {
+      "name": "Env.j2",
+      "description": "env file",
+      "outputFilePath": ".env"
+    },
+    {
+      "name": "Gitignore.j2",
+      "description": "git ignore file",
+      "outputFilePath": ".gitignore"
+    },
+    {
+      "name": "Nest-cli.json.j2",
+      "description": "nest cli file",
+      "outputFilePath": "nest-cli.json"
+    },
+    {
+      "name": "Pr.yaml.j2",
+      "description": "cli for pull request",
+      "outputFilePath": ".github/workflows/pr.yaml"
+    },
+    {
+      "name": "Prettierignore.j2",
+      "description": "ignore something from prettier plugin",
+      "outputFilePath": ".prettierignore"
+    },
+    {
+      "name": "Prettierrrc.j2",
+      "description": "prettier config",
+      "outputFilePath": ".prettierrc"
+    },
+    {
+      "name": "README.md.j2",
+      "description": "read me",
+      "outputFilePath": "README.md"
+    },
+    {
+      "name": "Releaserc.j2",
+      "description": "release config",
+      "outputFilePath": ".releaserc"
+    },
+    {
+      "name": "Tsconfig.build.json.j2",
+      "description": "ts config build",
+      "outputFilePath": "tsconfig.build.json"
+    },
+    {
+      "name": "Tsconfig.json.j2",
+      "description": "ts config",
+      "outputFilePath": "tsconfig.json"
+    }
+  ]
+}
